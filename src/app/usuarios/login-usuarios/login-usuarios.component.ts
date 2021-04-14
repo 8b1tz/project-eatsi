@@ -21,10 +21,10 @@ export class LoginUsuariosComponent implements OnInit {
     this.usuarioService.listar().subscribe(
       usuarios =>{
          if((usuarios.filter(usu => usu.email == email && usu.senha == senha).length != 0)){
-           console.log("entra")
+           alert(`Bem vindo!`)
           }
          else{
-          console.log("se retire")
+          alert("Tente novamente!")
         }
          
       }

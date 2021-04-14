@@ -14,7 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
 import '@angular/compiler'
-
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +23,7 @@ import '@angular/compiler'
   
   ],
   imports: [
+    MatMenuModule,
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,

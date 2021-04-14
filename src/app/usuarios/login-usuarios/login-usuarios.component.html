@@ -1,8 +1,6 @@
-
-<mat-card-header >
-    <mat-card-title>login Usuário</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
+<mat-card class="card-login">
+  <mat-card-content class = "content">
+    <mat-card-title>Login Usuário</mat-card-title>
     <mat-form-field appearance="fill" class="mat-form-simples">
       <mat-label>Email</mat-label>
       <input matInput [(ngModel)]="usuario.email" placeholder="digite o Email">
@@ -12,6 +10,9 @@
       <input matInput [(ngModel)]="usuario.senha" placeholder="digite o Senha">
     </mat-form-field>
   <mat-card-footer align="center">
-    <button mat-raised-button mat-icon-button color="primary" (click)="load(usuario.email, usuario.senha)">
+    <button mat-raised-button mat-icon-button color="button" (click)="load(usuario.email, usuario.senha)">
+    Login
     </button>
   </mat-card-footer>
+  </mat-card-content>
+</mat-card>
