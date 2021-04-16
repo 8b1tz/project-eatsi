@@ -1,20 +1,16 @@
 .card-login{
-    background-image: url('../../images/comidas-fundos.png');
+ 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: rgb(58, 11, 11);
+
 }
 
 .content{
     display: grid;
-    background-color: orangered;
-    width: 70%;
     font-size: 30px;
-    border-radius: 30px;
     padding: 20px;
     margin: 0 auto;
-    box-shadow: 0 0  30px gold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 button{
@@ -23,7 +19,6 @@ button{
     font-size: 30px;
     margin: 0 auto;
     border-radius: 20px;
-    background-color:rgb(255, 157, 0);
 }
 
 input{
