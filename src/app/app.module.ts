@@ -6,34 +6,46 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginUsuariosComponent } from './usuarios/login-usuarios/login-usuarios.component';
 import { CadastroUsuariosComponent } from './usuarios/cadastro-usuarios/cadastro-usuarios.component';
-import { FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldModule, MatLabel} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
 import '@angular/compiler'
 import {MatMenuModule} from '@angular/material/menu';
+import { RestaurantesListComponent } from './restaurantes/restaurantes-list/restaurantes-list.component';
+import { RestauranteComponent } from './restaurantes/restaurante/restaurante.component';
+import { MatTableModule } from '@angular/material/table';
+import { LayoutModule } from './layout/layout.module';
+import { FormsModule } from '@angular/forms';
+
+
+
 @NgModule({
+
   declarations: [
     AppComponent,
     LoginUsuariosComponent,
     CadastroUsuariosComponent,
-  
+    RestaurantesListComponent,
+    RestauranteComponent,
   ],
   imports: [
+    MatTableModule,
     MatMenuModule,
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
     MatButtonModule,
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    LayoutModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

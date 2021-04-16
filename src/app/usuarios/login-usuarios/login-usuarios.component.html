@@ -1,18 +1,26 @@
-<mat-card class="card-login">
-  <mat-card-content class = "content">
-    <mat-card-title>Login Usuário</mat-card-title>
-    <mat-form-field appearance="fill" class="mat-form-simples">
-      <mat-label>Email</mat-label>
-      <input matInput [(ngModel)]="usuario.email" placeholder="digite o Email">
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="mat-form-simples">
-      <mat-label>Senha</mat-label>
-      <input matInput [(ngModel)]="usuario.senha" placeholder="digite o Senha">
-    </mat-form-field>
-  <mat-card-footer align="center">
-    <button mat-raised-button mat-icon-button color="button" (click)="load(usuario.email, usuario.senha)">
-    Login
-    </button>
-  </mat-card-footer>
+<mat-card  class="example-card">
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content >
+    <form class="example-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" [(ngModel)]="email" name="username" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+        <td><mat-form-field class="example-full-width">
+          <input matInput placeholder="Senha" [(ngModel)]="senha"type="password" name="password" required>
+        </mat-form-field></td>
+      </tr></table>
+    </form>
+  
   </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="load()" color="primary">Login</button>
+  </mat-card-actions>
 </mat-card>
