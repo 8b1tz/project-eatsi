@@ -1,7 +1,7 @@
 
 <mat-card class = 'card-login'>
     <mat-card-content class = 'content'>
-      <mat-card-title align="center">Cadastrar Usuário</mat-card-title>
+      <mat-card-title align="center" class="title-cadastrar">Cadastrar Usuário</mat-card-title>
       <mat-form-field appearance="fill" class="mat-form-simples">
         <mat-label>Nome</mat-label>
         <input matInput [(ngModel)]="usuario.nome" placeholder="digite o nome"required>
@@ -20,7 +20,7 @@
       </mat-form-field>
 
     <mat-card-footer align="center">
-      <button mat-raised-button mat-icon-button color="primary" (click)="inserirUsuario()">
+      <button class="button" mat-raised-button mat-icon-button color="primary" (click)="inserirUsuario()">
        Cadastrar
       </button>
     </mat-card-footer>

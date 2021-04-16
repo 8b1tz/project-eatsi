@@ -322,6 +322,14 @@
     {
       "log": false,
       "id": 61
+    },
+    {
+      "log": false,
+      "nome": "as",
+      "email": "as",
+      "telefone": "as",
+      "senha": "as",
+      "id": 62
     }
   ],
   "restaurantes": [
