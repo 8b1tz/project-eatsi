@@ -20,7 +20,7 @@ import { MatTableModule } from '@angular/material/table';
 import { LayoutModule } from './layout/layout.module';
 import { FormsModule } from '@angular/forms';
 import { UsuarioModule } from './usuarios/usuarios.module';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -44,7 +44,8 @@ import { UsuarioModule } from './usuarios/usuarios.module';
     HttpClientModule,
     LayoutModule,
     FormsModule,
-    UsuarioModule
+    UsuarioModule,
+    MatSnackBarModule
     
     
   ],

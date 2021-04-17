@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/shared/model/Usuario';
+import { MensagensService } from 'src/app/shared/services/mensagens.service';
 import { UsuariosService} from 'src/app/shared/services/usuarios.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class CadastroUsuariosComponent implements OnInit {
   usuario : Usuario; 
   usuarios : Array<Usuario>;
 
-  constructor(private usuarioService: UsuariosService) { 
+  constructor(private usuarioService: UsuariosService,  private mensagem: MensagensService) { 
     this.usuario = new Usuario();
     this.usuarios = new Array<Usuario>();
     this.usuarioService.listar().subscribe(
@@ -26,13 +27,17 @@ export class CadastroUsuariosComponent implements OnInit {
   }
   inserirUsuario(): void {
     if (this.usuarios.find(x => x.email== this.usuario.email)) {
-      console.log("já existe o com esse email!")
+      this.mensagem.error('já existe o com esse email!');
+    }
+    if (this.usuario.email == null || this.usuario.senha == null || 
+      this.usuario.telefone == null || this.usuario.nome == null){
+      this.mensagem.error('preencha todos os campos!')
     }
     else{
       this.usuarioService.inserir(this.usuario).subscribe(
         usuarioInserido => {
           this.usuarios.push(usuarioInserido);
-          alert(`Usuário ${usuarioInserido.nome} inserido com sucesso!`);
+          this.mensagem.success(`Usuário ${usuarioInserido.nome} inserido com sucesso!`);
         } 
       );
     }

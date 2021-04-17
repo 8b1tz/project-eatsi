@@ -1,6 +1,7 @@
 import { Component,  OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/shared/model/Usuario';
+import { MensagensService } from 'src/app/shared/services/mensagens.service';
 import { UsuariosService} from 'src/app/shared/services/usuarios.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class LoginUsuariosComponent implements OnInit {
  
   
 
-  constructor(private usuarioService: UsuariosService, private roteador: Router) {
+  constructor(private usuarioService: UsuariosService, private roteador: Router, private mensagem : MensagensService) {
     this.usuario = new Usuario()
     this.usuarios = new Array<Usuario>();
     this.usuarioService.listar().subscribe(
@@ -32,8 +33,11 @@ export class LoginUsuariosComponent implements OnInit {
     if((this.usuarios.filter(usu => usu.email == this.usuario.email && usu.senha == this.usuario.senha).length != 0)){
            this.roteador.navigate(['restaurantes']);       
       }
+    if(this.usuario.email == null || this.usuario.senha == null){
+            this.mensagem.error('preencha todos os campos! ')
+    }
     else{
-          alert("Tente novamente!")
+          this.mensagem.error("Tente novamente, algo está errado!")
       }
          
       
