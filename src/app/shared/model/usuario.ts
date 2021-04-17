@@ -1,4 +1,3 @@
-import { Endereco } from "./endereço";
 
 export class Usuario {
 
@@ -6,7 +5,5 @@ export class Usuario {
     email?: string;
     senha?: string;
     telefone?: string;
-    log: boolean = false;
-    //endereco?: Endereco;
   
 }

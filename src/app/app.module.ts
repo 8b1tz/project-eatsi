@@ -19,6 +19,7 @@ import { RestauranteComponent } from './restaurantes/restaurante/restaurante.com
 import { MatTableModule } from '@angular/material/table';
 import { LayoutModule } from './layout/layout.module';
 import { FormsModule } from '@angular/forms';
+import { UsuarioModule } from './usuarios/usuarios.module';
 
 
 
@@ -26,8 +27,6 @@ import { FormsModule } from '@angular/forms';
 
   declarations: [
     AppComponent,
-    LoginUsuariosComponent,
-    CadastroUsuariosComponent,
     RestaurantesListComponent,
     RestauranteComponent,
   ],
@@ -44,7 +43,9 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     HttpClientModule,
     LayoutModule,
-    FormsModule
+    FormsModule,
+    UsuarioModule
+    
     
   ],
   providers: [],

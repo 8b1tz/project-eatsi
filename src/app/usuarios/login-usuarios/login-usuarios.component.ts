@@ -1,4 +1,4 @@
-import { Component,  OnInit } from '@angular/core';
+import { Component,  OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/shared/model/Usuario';
 import { UsuariosService} from 'src/app/shared/services/usuarios.service';
@@ -9,12 +9,18 @@ import { UsuariosService} from 'src/app/shared/services/usuarios.service';
   styleUrls: ['./login-usuarios.component.css']
 })
 export class LoginUsuariosComponent implements OnInit {
-  email: string;
-  senha : string;
+  
+  usuarios : Array<Usuario>
+  usuario : Usuario;
+ 
   
 
   constructor(private usuarioService: UsuariosService, private roteador: Router) {
-
+    this.usuario = new Usuario()
+    this.usuarios = new Array<Usuario>();
+    this.usuarioService.listar().subscribe(
+      usu => usu.forEach( u => this.usuarios.push(u))
+    )
     
    }
 
@@ -23,18 +29,15 @@ export class LoginUsuariosComponent implements OnInit {
   }
 
   load(){
-    this.usuarioService.listar().subscribe(
-      usuarios =>{
-         if((usuarios.filter(usu => usu.email == this.email && usu.senha == this.senha).length != 0)){
-           this.roteador.navigate(['restaurantes']);
-           
-          }
-         else{
-          alert("Tente novamente!")
-        }
-         
+    if((this.usuarios.filter(usu => usu.email == this.usuario.email && usu.senha == this.usuario.senha).length != 0)){
+           this.roteador.navigate(['restaurantes']);       
       }
-    )
+    else{
+          alert("Tente novamente!")
+      }
+         
+      
+    
     
   }
 

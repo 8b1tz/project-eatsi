@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MatTableDataSource } from "@angular/material/table";
-import { Router } from "@angular/router";
+
 import { Restaurante } from "src/app/shared/model/restaurante";
 import { RestaurantesService } from "src/app/shared/services/restaurantes.service";
 
@@ -15,7 +15,7 @@ export class RestaurantesListComponent  implements OnInit {
   dataSource: MatTableDataSource<Restaurante>;
   mostrarColunas = ['nome','descricao','cep','telefone'];
 
-  constructor(private RestauranteService: RestaurantesService, private roteador: Router) {
+  constructor(private RestauranteService: RestaurantesService) {
   }
 
   ngOnInit(): void {

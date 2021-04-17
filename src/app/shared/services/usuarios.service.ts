@@ -8,6 +8,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 })
 export class UsuariosService {
 
+  private email: string;
 
   URL_USUARIOS = 'http://localhost:3000/usuarios';
 
@@ -26,4 +27,10 @@ export class UsuariosService {
     return this.httpClient.get<Usuario>(`${this.URL_USUARIOS}/${id}`);
   }
 
+  setEmail(email : string){
+    this.email = email;
+  }
+  getEmail() : string{
+    return this.email;
+  }
 }
