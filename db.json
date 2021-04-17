@@ -2,7 +2,7 @@
   "usuarios": [
     {
       "nome": "dddddd",
-      "email": "ddddddd",
+      "email": "ddddddd@gmail.com",
       "telefone": "dddddddddd",
       "senha": "ddddddddd",
       "confirmaSenha": "dddddddd",
@@ -10,7 +10,7 @@
     },
     {
       "nome": "teste",
-      "email": "teste",
+      "email": "teste@gmail.com",
       "telefone": "teste",
       "senha": "teste",
       "id": 2
@@ -23,11 +23,25 @@
       "id": 3
     },
     {
-      "nome": "teste2",
-      "email": "teste2",
-      "telefone": "teste",
+      "nome": "teste",
+      "email": "teste2@gmail.com",
+      "telefone": "tete",
       "senha": "teste",
       "id": 4
+    },
+    {
+      "nome": "pipi",
+      "email": "pipi@gmail.com",
+      "telefone": "pipi",
+      "senha": "pipi",
+      "id": 9
+    },
+    {
+      "nome": "teste",
+      "email": "teste3@gmail.com",
+      "telefone": "teste",
+      "senha": "teste",
+      "id": 10
     }
   ],
   "restaurantes": [

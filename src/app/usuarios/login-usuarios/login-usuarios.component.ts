@@ -33,9 +33,9 @@ export class LoginUsuariosComponent implements OnInit {
     if((this.usuarios.filter(usu => usu.email == this.usuario.email && usu.senha == this.usuario.senha).length != 0)){
            this.roteador.navigate(['restaurantes']);       
       }
-    if(this.usuario.email == null || this.usuario.senha == null){
-            this.mensagem.error('preencha todos os campos! ')
-    }
+    else if(this.usuario.email == null || this.usuario.senha == null){
+              this.mensagem.error('preencha todos os campos! ')
+      }
     else{
           this.mensagem.error("Tente novamente, algo está errado!")
       }
