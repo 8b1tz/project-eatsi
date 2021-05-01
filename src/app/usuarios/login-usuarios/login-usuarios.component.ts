@@ -17,16 +17,16 @@ export class LoginUsuariosComponent implements OnInit {
   
 
   constructor(private usuarioService: UsuariosService, private roteador: Router, private mensagem : MensagensService) {
+    
+    
+   }
+
+  ngOnInit(): void {
     this.usuario = new Usuario()
     this.usuarios = new Array<Usuario>();
     this.usuarioService.listar().subscribe(
       usu => usu.forEach( u => this.usuarios.push(u))
     )
-    
-   }
-
-  ngOnInit(): void {
-
   }
 
   load(){

@@ -42,6 +42,20 @@
       "telefone": "teste",
       "senha": "teste",
       "id": 10
+    },
+    {
+      "nome": "teste",
+      "email": "teste",
+      "telefone": "teste",
+      "senha": "teste",
+      "id": 11
+    },
+    {
+      "nome": "aaa",
+      "email": "aaa",
+      "telefone": "aaa",
+      "senha": "aaa",
+      "id": 12
     }
   ],
   "restaurantes": [

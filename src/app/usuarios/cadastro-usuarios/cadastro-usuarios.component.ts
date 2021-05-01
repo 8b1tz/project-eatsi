@@ -16,15 +16,16 @@ export class CadastroUsuariosComponent implements OnInit {
   usuarios : Array<Usuario>;
 
   constructor(private usuarioService: UsuariosService,  private mensagem: MensagensService, private roteador: Router) { 
+    
+    
+  }
+
+  ngOnInit(): void {
     this.usuario = new Usuario();
     this.usuarios = new Array<Usuario>();
     this.usuarioService.listar().subscribe(
       usu => usu.forEach( u => this.usuarios.push(u))
     )
-    
-  }
-
-  ngOnInit(): void {
   }
   inserirUsuario(): void {
     if (this.usuarios.find(x => x.email== this.usuario.email)) {
