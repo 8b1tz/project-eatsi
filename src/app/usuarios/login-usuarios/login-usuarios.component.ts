@@ -17,25 +17,25 @@ export class LoginUsuariosComponent implements OnInit {
   
 
   constructor(private usuarioService: UsuariosService, private roteador: Router, private mensagem : MensagensService) {
+    
+    
+   }
+
+  ngOnInit(): void {
     this.usuario = new Usuario()
     this.usuarios = new Array<Usuario>();
     this.usuarioService.listar().subscribe(
       usu => usu.forEach( u => this.usuarios.push(u))
     )
-    
-   }
-
-  ngOnInit(): void {
-
   }
 
   load(){
     if((this.usuarios.filter(usu => usu.email == this.usuario.email && usu.senha == this.usuario.senha).length != 0)){
            this.roteador.navigate(['restaurantes']);       
       }
-    if(this.usuario.email == null || this.usuario.senha == null){
-            this.mensagem.error('preencha todos os campos! ')
-    }
+    else if(this.usuario.email == null || this.usuario.senha == null){
+              this.mensagem.error('preencha todos os campos! ')
+      }
     else{
           this.mensagem.error("Tente novamente, algo está errado!")
       }
