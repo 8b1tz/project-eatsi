@@ -1,4 +1,5 @@
 export class Produto{
+    id: number;
     nome?: string;
     imagem?: URL;
     descricao?: string;

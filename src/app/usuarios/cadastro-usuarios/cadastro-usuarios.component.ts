@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/shared/model/Usuario';
 import { MensagensService } from 'src/app/shared/services/mensagens.service';
-import { UsuariosService} from 'src/app/shared/services/usuarios.service';
+import { UsuarioFirestoreService } from 'src/app/shared/services/usuario-firestore.service';
 
 @Component({
   selector: 'app-cadastro-usuarios',
@@ -15,7 +15,7 @@ export class CadastroUsuariosComponent implements OnInit {
   usuario : Usuario; 
   usuarios : Array<Usuario>;
 
-  constructor(private usuarioService: UsuariosService,  private mensagem: MensagensService, private roteador: Router) { 
+  constructor(private usuarioService: UsuarioFirestoreService,  private mensagem: MensagensService, private roteador: Router) { 
     
     
   }
@@ -41,7 +41,7 @@ export class CadastroUsuariosComponent implements OnInit {
           this.usuarioService.inserir(this.usuario).subscribe(
           usuarioInserido => {
           this.usuarios.push(usuarioInserido);
-          this.mensagem.success(`Usuário ${usuarioInserido.nome} inserido com sucesso!`);
+          this.mensagem.success(`Usuário inserido com sucesso!`);
           this.roteador.navigate(['login']);
         } 
       );

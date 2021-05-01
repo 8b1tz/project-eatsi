@@ -2,7 +2,7 @@ import { Component,  OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/shared/model/Usuario';
 import { MensagensService } from 'src/app/shared/services/mensagens.service';
-import { UsuariosService} from 'src/app/shared/services/usuarios.service';
+import { UsuarioFirestoreService } from 'src/app/shared/services/usuario-firestore.service';
 
 @Component({
   selector: 'app-login-usuarios',
@@ -16,7 +16,7 @@ export class LoginUsuariosComponent implements OnInit {
  
   
 
-  constructor(private usuarioService: UsuariosService, private roteador: Router, private mensagem : MensagensService) {
+  constructor(private usuarioService: UsuarioFirestoreService, private roteador: Router, private mensagem : MensagensService) {
     
     
    }

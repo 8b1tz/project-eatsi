@@ -21,6 +21,7 @@ import { LayoutModule } from './layout/layout.module';
 import { FormsModule } from '@angular/forms';
 import { UsuarioModule } from './usuarios/usuarios.module';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { FirestoreModule } from './firestore/firestore.module';
 
 
 @NgModule({
@@ -45,9 +46,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     LayoutModule,
     FormsModule,
     UsuarioModule,
-    MatSnackBarModule
-    
-    
+    MatSnackBarModule,
+    FirestoreModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

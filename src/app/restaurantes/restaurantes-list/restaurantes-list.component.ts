@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { MatTableDataSource } from "@angular/material/table";
 
 import { Restaurante } from "src/app/shared/model/restaurante";
-import { RestaurantesService } from "src/app/shared/services/restaurantes.service";
+import { RestauranteFirestoreService } from "src/app/shared/services/restaurante-firestore.service";
 
 
 @Component({
@@ -15,7 +15,7 @@ export class RestaurantesListComponent  implements OnInit {
   dataSource: MatTableDataSource<Restaurante>;
   mostrarColunas = ['nome','descricao','cep','telefone'];
 
-  constructor(private RestauranteService: RestaurantesService) {
+  constructor(private RestauranteService: RestauranteFirestoreService) {
   }
 
   ngOnInit(): void {
