@@ -1,5 +1,6 @@
  <mat-form-field class="filtro-restaurante">
     <mat-label >Filtro</mat-label>
+<<<<<<< HEAD
     <input  matInput placeholder="filtre por nome" (keyup)="filtrar(inputFiltro.value)" #inputFiltro>
   </mat-form-field>
 
@@ -27,6 +28,12 @@
 
   <!--
   <mat-table [dataSource]="dataSource" class = "table-content">
+=======
+    <input  matInput placeholder="filtre por qualquer campo" (keyup)="filtrar(inputFiltro.value)" #inputFiltro>
+  </mat-form-field>
+  
+    <mat-table [dataSource]="dataSource" class = "table-content">
+>>>>>>> b0f49b252cc2f33d97e76d7c0a824130d2e9cba8
     <mat-header-row *matHeaderRowDef="mostrarColunas"></mat-header-row>
     <mat-row *matRowDef="let row; columns: mostrarColunas;"></mat-row>
   
@@ -42,14 +49,26 @@
 
       <ng-container matColumnDef="cep">
         <mat-header-cell *matHeaderCellDef>Cep</mat-header-cell>
+<<<<<<< HEAD
         <mat-cell *matCellDef="let item">{{item.endereco[0]}}</mat-cell>
+=======
+        <mat-cell *matCellDef="let item">{{item.endereco.cep}}</mat-cell>
+>>>>>>> b0f49b252cc2f33d97e76d7c0a824130d2e9cba8
       </ng-container>
       
       
       <ng-container matColumnDef="telefone">
         <mat-header-cell *matHeaderCellDef>Telefones</mat-header-cell>
+<<<<<<< HEAD
         <mat-cell *matCellDef="let item">{{item.telefone[0]}}</mat-cell>
       </ng-container>
   
       
   </mat-table>-->
+=======
+        <mat-cell *matCellDef="let item">{{item.telefone}}</mat-cell>
+      </ng-container>
+  
+      
+  </mat-table>
+>>>>>>> b0f49b252cc2f33d97e76d7c0a824130d2e9cba8

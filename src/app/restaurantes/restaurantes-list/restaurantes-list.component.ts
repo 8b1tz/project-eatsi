@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-
 import { Restaurante } from "src/app/shared/model/restaurante";
 import { RestauranteFirestoreService } from "src/app/shared/services/restaurante-firestore.service";
 
@@ -11,8 +10,8 @@ import { RestauranteFirestoreService } from "src/app/shared/services/restaurante
 })
 export class RestaurantesListComponent  implements OnInit {
 
-  dataSource: Array<Restaurante>;
 
+  dataSource: Array<Restaurante>;
 
 
   constructor(private RestauranteService: RestauranteFirestoreService) {
@@ -21,7 +20,7 @@ export class RestaurantesListComponent  implements OnInit {
   ngOnInit(): void {
     this.RestauranteService.listar().subscribe(
       Restaurantes => this.dataSource = Restaurantes
-    );
+);
   }
 
   filtrar(texto: string): void {
